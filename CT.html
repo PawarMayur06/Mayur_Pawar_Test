@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
+    // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+   clevertap.account.push({"id": "TEST-7RZ-K79-7W7Z"});
+   clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
+   clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agrees to share their IP data
+    (function () {
+            var wzrk = document.createElement('script');
+            wzrk.type = 'text/javascript';
+            wzrk.async = true;
+            wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/clevertap.min.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wzrk, s);
+     })();
+
+     function trig(){
+        clevertap.event.push("Product Viewed", {
+  "Product name":"CleverTap",
+  "Product ID":"1",
+  "Name":"Mayur",
+  "Email":"mayurkpawar06@gmail.com"
+});
+     }
+     
+   </script>
+   
+</head>
+<body>
+    <p>Hey there this is Mayurr!!!</p>
+
+    <button onclick="trig()"> Click here</button>
+</body>
+</html>
